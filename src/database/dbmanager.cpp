@@ -2,6 +2,7 @@
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QJsonArray>
 
 DbManager::DbManager(QObject *parent) : QObject(parent) {
 }
@@ -62,7 +63,7 @@ bool DbManager::createTables() {
     return true;
 }
 
-bool DbManager::addEvent(const Event& event) {
+bool DbManager::addEvent(Event& event) {
     QSqlQuery query;
     
     query.prepare(R"(
@@ -79,8 +80,8 @@ bool DbManager::addEvent(const Event& event) {
         return false;
     }
     
-    // Получаем ID нового события
-    event.id = query.lastInsertId().toLongLong();
+    // Получаем ID нового события и обновляем переданный объект
+    event.id = static_cast<qlonglong>(query.lastInsertId().toLongLong());
     return true;
 }
 
@@ -251,7 +252,7 @@ QStringList DbManager::getCategories() const {
 void DbManager::bindEventToQuery(QSqlQuery& query, const Event& event) const {
     query.bindValue(":title", event.title);
     query.bindValue(":startDate", event.startDate.toString(Qt::ISODate));
-    query.bindValue(":durationDays", event.durationDays);
+    query.bindValue(":durationDays", static_cast<qlonglong>(event.durationDays));
     query.bindValue(":description", event.description);
     query.bindValue(":eventType", event.eventType);
     query.bindValue(":category", event.category);

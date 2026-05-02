@@ -21,7 +21,7 @@ public:
     bool initDatabase(const QString& dbPath = ":memory:");
     
     // CRUD операции для событий
-    bool addEvent(const Event& event);
+    bool addEvent(Event& event);  // Не const, т.к. меняется ID после вставки
     bool updateEvent(const Event& event);
     bool deleteEvent(int64_t eventId);
     Event getEvent(int64_t eventId) const;

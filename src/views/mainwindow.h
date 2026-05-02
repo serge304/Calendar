@@ -3,17 +3,17 @@
 
 #include <QMainWindow>
 #include <QVariantMap>
+#include <QLineEdit>
+#include <QDateEdit>
+#include <QComboBox>
+#include <QSpinBox>
+#include <QListView>
+#include <QPushButton>
+#include <QLabel>
 
 class DbManager;
 class EventModel;
 class EventFilterProxyModel;
-class QListView;
-class QLineEdit;
-class QDateEdit;
-class QComboBox;
-class QPushButton;
-class QSpinBox;
-class QLabel;
 
 class MainWindow : public QMainWindow {
     Q_OBJECT

@@ -11,7 +11,6 @@ CONFIG += c++20
 # Исходные файлы
 SOURCES += \
     src/main.cpp \
-    src/models/event.cpp \
     src/models/eventmodel.cpp \
     src/models/eventfilterproxymodel.cpp \
     src/database/dbmanager.cpp \
@@ -30,15 +29,6 @@ HEADERS += \
     src/views/eventdialog.h \
     src/views/eventlistview.h \
     src/delegates/eventdelegate.h
-
-# Файлы форм (если будут использоваться .ui файлы)
-FORMS += \
-    src/views/mainwindow.ui \
-    src/views/eventdialog.ui
-
-# Ресурсы
-RESOURCES += \
-    resources.qrc
 
 # Пути для поиска заголовочных файлов
 INCLUDEPATH += $$PWD/src

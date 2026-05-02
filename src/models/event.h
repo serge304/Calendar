@@ -70,7 +70,7 @@ struct Event {
 };
 
 // Перегрузка оператора сравнения для фильтрации
-bool operator==(const Event& lhs, const Event& rhs) {
+inline bool operator==(const Event& lhs, const Event& rhs) {
     return lhs.id == rhs.id;
 }
 

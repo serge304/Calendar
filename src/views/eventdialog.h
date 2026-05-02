@@ -2,15 +2,15 @@
 #define EVENTDIALOG_H
 
 #include <QDialog>
+#include <QLineEdit>
+#include <QDateEdit>
+#include <QTextEdit>
+#include <QComboBox>
+#include <QPushButton>
+#include <QLabel>
+#include <QListWidget>
+#include <QSpinBox>
 #include "models/event.h"
-
-class QLineEdit;
-class QDateEdit;
-class QTextEdit;
-class QComboBox;
-class QPushButton;
-class QLabel;
-class QListWidget;
 
 class EventDialog : public QDialog {
     Q_OBJECT
