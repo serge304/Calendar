@@ -1,45 +1,46 @@
 ```
-# Compiled and build artifacts
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.a
-*.out
+# Qt/Qt Creator files
+*.pro.user
+*.pro.user.*
+*.qm
+*.qrc
+*.ui
 
-# Build directories
+# Build artifacts
 build/
 dist/
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.exe
 
 # Dependencies
 venv/
 .venv/
-__pycache__/
-*.egg-info/
-
-# Logs and temp files
-*.log
-*.tmp
-*.swp
+.env
+.env.local
+.env.*
 
 # Editors
 .vscode/
 .idea/
+*.swp
+*.swo
+*.tmp
 
-# Environment
-.env
-.env.local
-*.env.*
+# Logs
+*.log
 
 # Coverage
 coverage/
 htmlcov/
 .coverage
 
-# CMake
-CMakeFiles/
-CMakeCache.txt
-cmake_install.manifest
-Makefile
+# OS
+.DS_Store
+Thumbs.db
 ```
