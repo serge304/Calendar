@@ -34,7 +34,7 @@ HEADERS += \
 INCLUDEPATH += $$PWD/src
 
 # Настройки компиляции
-QMAKE_CXXFLAGS += -Wall -Wextra
+# QMAKE_CXXFLAGS += O2
 
 # Для Windows дополнительные настройки
 win32 {
